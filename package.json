@@ -1,0 +1,16 @@
+{
+  "name": "giselle-martinez-campaign",
+  "version": "1.0.0",
+  "description": "Campaign site for Giselle Martinez",
+  "main": "index.html",
+  "scripts": {
+    "dev": "serve .",
+    "build": "echo 'No build step required'"
+  },
+  "keywords": ["campaign", "politics", "election"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}

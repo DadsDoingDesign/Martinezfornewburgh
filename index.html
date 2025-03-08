@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giselle Martinez for City Council</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'campaign-purple': '#3B0764',
+                        'campaign-text': '#F1EFFD'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'inter-display': ['Inter', 'sans-serif'] // Using Inter as fallback for Inter Display
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #3B0764;
+            color: #F1EFFD;
+            font-family: 'Inter', sans-serif;
+        }
+        .logo-container {
+            max-width: 800px;
+            height: 20vh;
+            max-height: 400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .vote-text {
+            font-family: 'Inter', sans-serif;
+            font-weight: 900; /* black */
+            font-size: clamp(32px, 5vw, 64px);
+        }
+        .description-text {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400; /* regular */
+            font-size: clamp(18px, 3vw, 32px);
+        }
+        .coming-soon-text {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700; /* bold */
+            font-size: clamp(16px, 2vw, 24px);
+            text-decoration: underline;
+        }
+        .hero-container {
+            padding-left: 80px;
+            padding-right: 80px;
+            height: 80vh;
+        }
+        .panel-gap {
+            gap: 24px;
+        }
+        .text-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .img-container {
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+        }
+        .img-container img {
+            max-height: 100%;
+            object-fit: contain;
+        }
+        @media (max-width: 768px) {
+            .hero-container {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .mobile-flex-col-reverse {
+                flex-direction: column-reverse;
+            }
+            .img-container {
+                height: 60%;
+            }
+            .text-section {
+                height: 40%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="h-full flex flex-col">
+        <!-- Logo Section -->
+        <header class="w-full">
+            <div class="logo-container">
+                <img src="Giselle Logo-temp.png" alt="Giselle Martinez for City Council" class="max-w-full max-h-full">
+            </div>
+        </header>
+        
+        <!-- Main Content Section -->
+        <main class="flex-grow hero-container">
+            <div class="flex flex-col-reverse md:flex-row h-full panel-gap mobile-flex-col-reverse">
+                <!-- Left Panel - Image (displays below text on mobile) -->
+                <div class="w-full md:w-1/2 img-container justify-center">
+                    <img src="GiselleMartinez-Hero-temp.png" alt="Giselle Martinez" class="max-h-full">
+                </div>
+                
+                <!-- Right Panel - Text (displays above image on mobile) -->
+                <div class="w-full md:w-1/2 flex flex-col justify-center items-center text-center text-section">
+                    <div class="text-container">
+                        <h1 class="vote-text mb-3 md:mb-6">
+                            Vote June 24th
+                        </h1>
+                        <p class="description-text mb-3 md:mb-6">
+                            Re-elect Giselle so she can continue helping the working families of Newburgh
+                        </p>
+                        <a href="#" class="coming-soon-text">
+                            Full website coming soon
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
